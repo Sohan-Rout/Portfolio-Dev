@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { X, Calendar, Clock, Mail, User } from 'lucide-react';
-import { format, addDays, startOfDay, addHours } from 'date-fns';
+import { format, addDays, startOfDay } from 'date-fns';
 import emailjs from '@emailjs/browser';
 
 interface CalendarModalProps {

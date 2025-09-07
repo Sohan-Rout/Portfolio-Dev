@@ -64,38 +64,23 @@ const PhotoShowcase: React.FC = () => {
           </p>
         </div>
         
-        <div className="flex justify-center items-center relative">
-          <div className="relative">
-            {/* First Photo - Desk Setup */}
-            <div 
-              className="bg-white p-4 rounded-lg shadow-lg transform -rotate-6 hover:rotate-0 transition-transform duration-300 cursor-pointer hover:shadow-xl"
-              onClick={() => openModal(0)}
+        <div className="columns-1 sm:columns-2 md:columns-3 gap-4">
+          {images.map((img, index) => (
+            <div
+              key={index}
+              className="mb-4 break-inside-avoid cursor-pointer"
+              onClick={() => openModal(index)}
             >
-              <div className="w-64 h-48 bg-gradient-to-br from-purple-400 to-purple-600 rounded-md mb-3 flex items-center justify-center overflow-hidden">
-                <img 
-                  src={images[0].src}
-                  alt={images[0].alt}
-                  className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
-                />
-              </div>
-              <p className="text-center text-gray-700 font-handwriting text-sm">{images[0].caption}</p>
+              <img
+                src={img.src}
+                alt={img.alt}
+                className="w-full rounded-lg shadow-lg hover:scale-105 transition-transform duration-300"
+              />
+              <p className="text-center text-gray-700 font-handwriting text-sm mt-2">
+                {img.caption}
+              </p>
             </div>
-            
-            {/* Second Photo - Winter Scene */}
-            <div 
-              className="bg-white p-4 rounded-lg shadow-lg transform rotate-12 hover:rotate-0 transition-transform duration-300 cursor-pointer absolute -right-16 top-8 hover:shadow-xl"
-              onClick={() => openModal(1)}
-            >
-              <div className="w-64 h-48 bg-gradient-to-br from-blue-200 to-blue-400 rounded-md mb-3 flex items-center justify-center overflow-hidden">
-                <img 
-                  src={images[1].src}
-                  alt={images[1].alt}
-                  className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
-                />
-              </div>
-              <p className="text-center text-gray-700 font-handwriting text-sm">{images[1].caption}</p>
-            </div>
-          </div>
+          ))}
         </div>
       </section>
 
