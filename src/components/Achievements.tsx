@@ -8,48 +8,48 @@ const Achievements: React.FC = () => {
       title: "Devolympus Winners",
       description: "Secured first place for innovative AI-driven Ecommercsolutions, awarded by the Honorable CEO of API Market.",
       date: "2025",
-      color: "from-yellow-400 to-orange-500",
-      bgColor: "from-yellow-50 to-orange-50"
+      color: "from-black to-black",
+      bgColor: "from-neutral-100 to-white"
     },
     {
       icon: <Code className="w-8 h-8" />,
       title: "Open Source Contributor",
       description: "Active contributor to various open source projects with GitHub contributions",
       date: "2023 - Present",
-      color: "from-blue-500 to-purple-600",
-      bgColor: "from-blue-50 to-purple-50"
+      color: "from-black to-black",
+      bgColor: "from-neutral-100 to-white"
     },
     {
       icon: <Users className="w-8 h-8" />,
       title: "Qualifier of the TOI School League",
       description: "The City Qualifier of the Times of India School League is a competitive round where top students from various schools in a city compete in quizzes, aptitude, and subject-based challenges. It serves as a gateway to the regional and national stages, recognizing academic excellence and talent.",
       date: "2022",
-      color: "from-green-500 to-emerald-600",
-      bgColor: "from-green-50 to-emerald-50"
+      color: "from-black to-black",
+      bgColor: "from-neutral-100 to-white"
     },
     {
       icon: <Star className="w-8 h-8" />,
       title: "Competitive Programming Enthusiast",
-      description: "I'm a 5-star ⭐ coder on HackerRank, a LeetCode enthusiast, and an active member of the Student Coding Group at my college.",
+      description: "I'm a 5-star coder on HackerRank, a LeetCode enthusiast, and an active member of the Student Coding Group at my college.",
       date: "2022 - Present",
-      color: "from-pink-500 to-rose-600",
-      bgColor: "from-pink-50 to-rose-50"
+      color: "from-black to-black",
+      bgColor: "from-neutral-100 to-white"
     },
     {
       icon: <Zap className="w-8 h-8" />,
       title: "GDG Technical Lead",
       description: "Driving innovation and pushing the boundaries of what's possible. From solving complex problems to building incredible solutions, they're here to turn ideas into reality.",
       date: "2023",
-      color: "from-indigo-500 to-blue-600",
-      bgColor: "from-indigo-50 to-blue-50"
+      color: "from-black to-black",
+      bgColor: "from-neutral-100 to-white"
     },
     {
       icon: <Target className="w-8 h-8" />,
       title: "Conversion Rate Specialist",
       description: "Increased client conversion rates by 150% through strategic UX improvements",
       date: "2023 - 2024",
-      color: "from-teal-500 to-cyan-600",
-      bgColor: "from-teal-50 to-cyan-50"
+      color: "from-black to-black",
+      bgColor: "from-neutral-100 to-white"
     }
   ];
 
@@ -143,7 +143,7 @@ const Achievements: React.FC = () => {
           {achievements.map((achievement, index) => (
             <div
               key={index}
-              className={`relative p-6 rounded-2xl bg-gradient-to-br ${achievement.bgColor} border border-gray-100 hover:shadow-lg transition-all duration-300 group hover:scale-105`}
+              className={`relative p-6 rounded-2xl bg-gradient-to-br ${achievement.bgColor} border border-gray-100 shadow-md hover:shadow-lg transition-all duration-300 group hover:scale-105`}
             >
               <div className={`inline-flex p-3 rounded-xl bg-gradient-to-r ${achievement.color} text-white mb-4 group-hover:scale-110 transition-transform duration-300`}>
                 {achievement.icon}
