@@ -1,16 +1,13 @@
 import React, { useState } from 'react';
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 import {
-  Home,
-  Github,
-  Instagram,
-  Music2,
-  Linkedin,
   ExternalLink,
-  ChevronRight
+  ChevronRight,
+  Briefcase
 } from 'lucide-react';
-import PhotoShowcase from './components/PhotoShowcase';
+import Navbar from "./components/ui/navbar";
 import CalendarModal from './components/CalendarModal';
+import PhotoShowcase from './components/PhotoShowcase';
 import Achievements from './components/Achievements';
 import TechStack from './components/TechStack';
 
@@ -118,35 +115,28 @@ function App() {
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="flex justify-center pt-8 pb-16">
-        <nav className="bg-white rounded-full border border-gray-200 shadow-sm px-6 py-3">
-          <div className="flex items-center space-x-8">
-            <div className="flex items-center space-x-6">
-              <a href="/" title="Home"><Home className="w-5 h-5 text-gray-600 hover:text-gray-900" /></a>
-              <a href="https://github.com/Thakurayush124" target="_blank" rel="noopener noreferrer" title="GitHub"><Github className="w-5 h-5 text-gray-600 hover:text-gray-900" /></a>
-              <a href="https://www.instagram.com/ayushthakur1242021/" target="_blank" rel="noopener noreferrer" title="Instagram"><Instagram className="w-5 h-5 text-gray-600 hover:text-gray-900" /></a>
-              <a href="https://open.spotify.com/user/31rahoimntfuabtabsdy6p6n5p3i?si=ca3300486f544e3c" target="_blank" rel="noopener noreferrer" title="Music"><Music2 className="w-5 h-5 text-gray-600 hover:text-gray-900" /></a>
-              <a href="https://www.linkedin.com/in/ayush-thakur-542bb4202/" target="_blank" rel="noopener noreferrer" title="LinkedIn"><Linkedin className="w-5 h-5 text-gray-600 hover:text-gray-900" /></a>
-            </div>
-            <button onClick={() => setIsCalendarOpen(true)} className="bg-gray-900 text-white px-6 py-2.5 rounded-full hover:bg-gray-800 text-sm font-medium">
-              Book a call
-            </button>
-          </div>
-        </nav>
+        <Navbar />
       </div>
 
       {/* Hero Section */}
-      <section className="max-w-4xl mx-auto px-6">
+      <section className="max-w-4xl mx-auto px-6 pb-14">
         <div className="flex flex-col space-y-8">
           <div className="flex justify-start">
             <img src="https://raw.githubusercontent.com/Thakurayush124/image/main/Screenshot%202025-07-11%20115239.png" alt="Ayush" className="w-24 h-24 rounded-full object-cover border-4 border-white shadow-lg" />
           </div>
           <div className="space-y-6">
             <h1 className="text-5xl md:text-6xl font-bold text-gray-900 leading-tight">Hey, I'm Ayush.<br />Engineer & Designer.</h1>
-            <p className="text-xl text-gray-600 leading-relaxed max-w-3xl">Most designers can't code. Most developers can't design. I do both.<br />3 years turning ideas into profitable products.</p>
+            <p className="text-xl text-gray-600 leading-relaxed max-w-3xl">I bridge the gap between design and development.<br />crafting products that are both beautiful and functional.</p>
           </div>
           <div className="flex flex-wrap gap-3">
-            <button className="bg-gray-900 text-white px-6 py-3 rounded-lg hover:bg-gray-800">Hire me</button>
-            <button className="bg-green-100 text-green-800 px-6 py-3 rounded-lg hover:bg-green-200">• Open to Opportunities</button>
+            <button onClick={() => window.open("_blank")} className="flex items-center gap-2 bg-black text-white px-6 py-3 rounded-lg hover:scale-105 duration-300">
+              <Briefcase size={22} />
+              Hire me
+            </button>
+            <button className="bg-green-100 text-green-800 px-6 py-3 rounded-lg flex items-center gap-2">
+              <div className='bg-emerald-500 h-2 w-2 rounded-full animate-pulse'></div>
+              Open to Opportunities
+            </button>
           </div>
         </div>
       </section>
